@@ -32,6 +32,7 @@ syn match octaveComment            "#.*$"  contains=matlabTodo,matlabTab
 syn keyword octaveConditional      endif
 syn keyword octaveRepeat           endfor endwhile
 syn keyword octaveFunction         endfunction
+syn keyword octaveLabel            endswitch
 
 " The ! (not)
 syn match octaveLogicalOperator         "!"
@@ -59,6 +60,7 @@ if version >= 508 || !exists("did_octave_syntax_inits")
   HiLink octaveFunction            Function
   HiLink octaveLogicalOperator     Operator
   HiLink octaveFunctions           Function
+  HiLink octaveLabel               Label
   
   delcommand HiLink
 endif
